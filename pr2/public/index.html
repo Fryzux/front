@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>CRUD товаров</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+  <h1>Управление товарами (CRUD)</h1>
+
+  <div class="card">
+    <input type="number" id="product-id" placeholder="ID">
+    <input type="text" id="product-name" placeholder="Название">
+    <input type="number" id="product-price" placeholder="Цена">
+
+    <button id="create-btn">Добавить</button>
+    <button id="update-btn">Обновить</button>
+    <button id="delete-btn">Удалить</button>
+
+    <ul id="products-list"></ul>
+  </div>
+
+</div>
+
+<script src="products.js"></script>
+</body>
+</html>

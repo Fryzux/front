@@ -1,0 +1,130 @@
+$bg-main: #2f3a4d;
+$bg-gradient: linear-gradient(135deg, #2f3a4d, #1c2431);
+$card-bg: #1f2532;
+$accent: #3fa6ff;
+$accent-hover: #61b5ff;
+$price-color: #4cffb0;
+$text-muted: #b9c3d6;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: $bg-gradient;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.card {
+  background: $card-bg;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.5s ease;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.05);
+  background: #18202c;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+
+  &:focus {
+    border-color: $accent;
+  }
+}
+
+button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: none;
+  background: $accent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 5px 6px 5px 0;
+  transition: 0.2s;
+
+  &:hover {
+    background: $accent-hover;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+/* ===== Список товаров ===== */
+
+#products-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  li {
+    background: darken($card-bg, 5%);
+    padding: 14px 18px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.2s;
+    border: 1px solid rgba(255,255,255,0.05);
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .product-id {
+      color: $accent;
+      font-weight: bold;
+    }
+
+    .product-price {
+      color: $price-color;
+      font-weight: bold;
+    }
+  }
+}
+
+/* Анимация */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
