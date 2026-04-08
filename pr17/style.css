@@ -1,0 +1,287 @@
+:root {
+    --primary: #534AB7;
+    --primary-soft: rgba(83, 74, 183, 0.15);
+    --primary-border: rgba(83, 74, 183, 0.2);
+    --bg-page: #f7f5ff;
+    --bg-input: #f7f5ff;
+    --bg-nav: #eeedf8;
+    --card-shadow: 0 4px 32px rgba(83, 74, 183, 0.08);
+    --font: 'Inter', -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: 
+        radial-gradient(circle 500px at 90% 10%, rgba(83,74,183,0.4) 0%, transparent 70%),
+        radial-gradient(circle 420px at 5% 85%, rgba(127,119,221,0.3) 0%, transparent 70%),
+        radial-gradient(circle 300px at 50% 50%, rgba(175,169,236,0.2) 0%, transparent 70%),
+        var(--bg-page);
+    background-attachment: fixed; /* Фиксируем фон */
+    font-family: var(--font);
+    font-size: 13px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    color: #333;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+}
+
+.glass-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 0.5px solid var(--primary-soft);
+    box-shadow: var(--card-shadow);
+    padding: 24px;
+    width: 100%;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.glass-card:hover {
+    transform: scale(1.01);
+}
+
+/* Header & Pill Nav */
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.pill-nav {
+    background: var(--bg-nav);
+    padding: 4px;
+    border-radius: 100px;
+    display: flex;
+    gap: 2px;
+}
+
+.pill-nav button {
+    border: none;
+    background: transparent;
+    padding: 6px 14px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pill-nav button.active {
+    background: #ffffff;
+    color: var(--primary);
+    box-shadow: 0 2px 8px rgba(83, 74, 183, 0.1);
+}
+
+/* Section Labels & Forms */
+.section-label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.form-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+input[type="text"],
+input[type="datetime-local"] {
+    background: var(--bg-input);
+    border: 0.5px solid var(--primary-border);
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 13px;
+    outline: none;
+    color: #333;
+    width: 100%;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: var(--primary);
+}
+
+.separator {
+    height: 0.5px;
+    background: rgba(83, 74, 183, 0.12);
+    margin: 20px 0;
+    border: none;
+}
+
+.count-badge {
+    background: var(--bg-nav);
+    color: var(--primary);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 100px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+/* Buttons */
+.button {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.button.primary {
+    background: var(--primary);
+    color: #ffffff;
+}
+
+.button.ghost {
+    background: transparent;
+    border: 0.5px solid rgba(83, 74, 183, 0.3);
+    color: var(--primary);
+}
+
+.button.secondary {
+    background: transparent;
+    border: 0.5px solid rgba(83, 74, 183, 0.2);
+    color: #666;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+/* Notes List */
+.list-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.notes-list {
+    list-style: none;
+}
+
+.note-item {
+    background: #fff;
+    padding: 10px 0;
+    border-bottom: 0.5px solid rgba(83, 74, 183, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    animation: fadeIn 0.4s ease-out forwards;
+    transition: transform 0.2s ease;
+}
+
+.note-item:hover {
+    transform: translateX(4px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.note-item:last-child {
+    border-bottom: none;
+}
+
+.note-content {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.note-text {
+    font-size: 13px;
+}
+
+.note-content.completed .note-text {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.note-reminder {
+    font-size: 11px;
+    color: var(--primary);
+    opacity: 0.8;
+    background: var(--bg-nav);
+    padding: 2px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 4px;
+    transition: color 0.2s;
+}
+
+.btn-close:hover {
+    color: #ff4444;
+}
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+}
+
+/* Push Footer */
+#push-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+/* Toast */
+.toast-notif {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #ffffff;
+    border: 0.5px solid var(--primary-border);
+    padding: 12px 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(83, 74, 183, 0.1);
+    z-index: 1000;
+    font-weight: 500;
+}
