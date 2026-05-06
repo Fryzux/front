@@ -1,0 +1,14 @@
+{
+  "name": "notes-pwa-pr15",
+  "version": "1.5.0",
+  "description": "PWA App Shell + HTTPS Practice",
+  "main": "app.js",
+  "scripts": {
+    "generate-certs": "node generate-certs.js",
+    "start": "http-server --ssl --cert localhost.pem --key localhost-key.pem -p 3000"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "selfsigned": "^2.1.1"
+  }
+}

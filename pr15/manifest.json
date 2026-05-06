@@ -1,0 +1,39 @@
+{
+  "name": "Мои заметки (App Shell)",
+  "short_name": "Заметки v1.5",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4285f4",
+  "description": "Приложение для заметок с мгновенной загрузкой и HTTPS",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/favicon-192x192.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/favicon-512x512.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/favicon-512x512.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/desktop.png",
+      "sizes": "1264x705",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop App Shell view"
+    }
+  ]
+}

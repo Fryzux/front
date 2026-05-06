@@ -1,0 +1,17 @@
+{
+  "name": "Premium Notes PWA",
+  "short_name": "Notes",
+  "description": "A premium note-taking application with full offline support.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f0c29",
+  "theme_color": "#4e54c8",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

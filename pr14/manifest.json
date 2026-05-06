@@ -1,0 +1,51 @@
+{
+  "name": "Мои заметки",
+  "short_name": "Заметки",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4285f4",
+  "description": "Простое приложение для заметок, работающее офлайн",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/favicon-192x192.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/favicon-256x256.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/favicon-512x512.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/favicon-512x512.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshots/desktop.png",
+      "sizes": "1264x705",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Desktop view of the Notes app"
+    },
+    {
+      "src": "screenshots/mobile.png",
+      "sizes": "500x717",
+      "type": "image/png",
+      "label": "Mobile view of the Notes app"
+    }
+  ]
+}

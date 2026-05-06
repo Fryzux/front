@@ -98,7 +98,7 @@ self.addEventListener('push', (event) => {
     
     if (data.reminderId) {
         options.actions = [
-            { action: 'snooze', title: 'Отложить на 10 секунд' }
+            { action: 'snooze', title: 'Отложить на 5 минут' }
         ];
     }
     
